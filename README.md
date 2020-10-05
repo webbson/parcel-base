@@ -10,3 +10,8 @@
 
 More [parcel documentation](https://parceljs.org/cli.html)
 Addons can be found at [awesome parcel](https://github.com/parcel-bundler/awesome-parcel#plugins)
+
+
+Notes:
+1. Added `patch-package` with a patch for `parcel-bundler` which fixes an issue with using multiple html files.
+2. `css-vars-ponyfill` is used for adding support for css vars to IE11.  

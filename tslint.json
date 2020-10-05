@@ -2,5 +2,27 @@
   "extends": "tslint:recommended",
   "linterOptions": {
     "formatter": "stylish"
+  },
+  "rules": {
+    "no-console": {
+      "severity": "warn",
+      "options": [
+        "debug",
+        "info",
+        "log",
+        "time",
+        "timeEnd",
+        "trace"
+      ]
+    },
+    "typedef": [
+      true,
+      "parameter",
+      "arrow-parameter",
+      "property-declaration",
+      "variable-declaration",
+      "variable-declaration-ignore-function",
+      "member-variable-declaration"
+    ]
   }
 }

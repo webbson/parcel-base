@@ -1,8 +1,13 @@
+@import "./globals/_globals";
+@import "./utils/_utils";
+@import "./components/_components";
+@import "./sections/_sections";
+
 body {
     background-image: url("../images/bg.png");
 }
 
 h1 {
-    color: rebeccapurple;
+    color: var(--main-text);
     font-size: 32px;
 }
