@@ -1,0 +1,14 @@
+{
+  "plugins": {
+    "posthtml-spaceless": {},
+    "posthtml-include": {
+      root: "./src/partials"
+    },
+    "posthtml-modules": {
+      root: "./src/partials"
+    },
+    "posthtml-expressions": {},
+    "posthtml-doctype": { "doctype": "HTML 5" }
+
+  }
+}

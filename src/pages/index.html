@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <include src="head/head.html"></include>
+</head>
+
+<body>
+    <include src="navigations/main.html"></include>
+    <module href="/hero/large.html">Hello World!</module>
+
+    <module href="/components/text-and-link.html" locals='{
+            "heading": "Read more about modules", 
+            "link": "Here!", 
+            "url": "https://github.com/posthtml/posthtml-modules",
+            "target": "_blank"}'>
+        <p>You can read more about the modules on the link:</p>
+    </module>
+
+    <include src="scripts/footer.html"></include>
+</body>
+
+</html>

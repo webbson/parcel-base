@@ -1,0 +1,9 @@
+// Colors either as $scss variables or declared as css-vars in :root. Pick and choose how you want to implement it.
+
+$mainBackground: #ffffff;
+$mainText: #202020;
+
+:root {
+  --main-background: #{$mainBackground};
+  --main-text: #{$mainText};
+}

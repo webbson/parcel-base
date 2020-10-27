@@ -1,13 +1,13 @@
 {
   "name": "parcel-base",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple base to be used for site development, both in starting face without backend and later with a backend.",
   "repository": "https://github.com/webbson/parcel-base",
-  "private": true,
   "scripts": {
-    "dev": "parcel ./pages/*.html",
-    "watch": "parcel watch frontend.ts --out-dir F:/path-to-site-on-local-server/dist --public-url ./",
-    "build": "parcel build frontend.ts --out-dir ./build --public-url ./",
+    "dev": "parcel ./src/pages/*.html",
+    "build:static": "parcel build ./src/pages/*.html --public-url ./",
+    "watch": "parcel watch ./src/index.ts --out-dir F:/path-to-site-on-local-server/dist --public-url ./",
+    "build": "parcel build ./src/index.ts --out-dir ./build --public-url ./",
     "postinstall": "patch-package"
   },
   "author": "Tom Stevens",
@@ -17,17 +17,22 @@
     "autoprefixer": "^9.8.6",
     "css-loader": "^4.3.0",
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-clean-dist": "0.0.6",
     "parcel-plugin-css-url-loader": "^1.0.5",
-    "parcel-plugin-tslint": "0.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "parcel-plugin-static-files-copy": "^2.5.0",
     "patch-package": "^6.2.2",
     "postcss": "^7.0.35",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^1.4.3",
+    "posthtml-modules": "^0.6.2",
+    "posthtml-spaceless": "0.0.3",
     "sass": "^1.26.10",
     "tslint": "^6.1.3",
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "css-vars-ponyfill": "^2.3.2"
+    "css-vars-ponyfill": "^2.3.2",
+    "lazysizes": "^5.2.2"
   },
   "postcss": {
     "plugins": {
@@ -39,6 +44,14 @@
   "babel": {
     "presets": [
       "@babel/preset-react"
+    ]
+  },
+  "staticFiles": {
+    "staticPath": [
+      {
+        "staticPath": "src/static",
+        "outDirPattern": "**/dist"
+      }
     ]
   }
 }
